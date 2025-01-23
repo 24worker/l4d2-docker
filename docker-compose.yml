@@ -1,0 +1,20 @@
+services:
+  l4d2server:
+    command: "-secure +exec server.cfg -port 27015 -tickrate 100"
+    container_name: l4d2server
+    image: 24workers/l4d2server:latest
+    ports:
+      - 27015:27015
+      - 27015:27015/udp
+    # 你也可以使用 host 的网络模式，减少 Docker 映射端口带来的性能损耗，不过这点损耗可以忽略不计。
+    # network_mode: host
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    volumes:
+      # 这里主机上的要映射到容器的路径请根据你的实际情况调整。
+      # 如果主机上没有 addons 这个文件夹，创建容器时会自动在主机上创建这个文件夹。
+      - ./addons/:/home/steam/l4d2server/left4dead2/addons/
+      - ./cfg/server.cfg:/home/steam/l4d2server/left4dead2/cfg/server.cfg:ro
+      - ./host.txt:/home/steam/l4d2server/left4dead2/host.txt:ro
+      - ./motd.txt:/home/steam/l4d2server/left4dead2/motd.txt:ro
