@@ -1,5 +1,7 @@
 # Left 4 Dead 2 Docker Server
 
+This project is based on the work of [HoshinoRei](https://github.com/HoshinoRei/l4d2server-docker).
+
 This repository contains the necessary files to run a Left 4 Dead 2 server using Docker.
 
 ## File Descriptions

@@ -1,5 +1,7 @@
 # 求生之路2 Docker 服务器
 
+本项目基于 [HoshinoRei](https://github.com/HoshinoRei/l4d2server-docker) 的工作。
+
 这个仓库包含使用 Docker 运行求生之路2服务器所需的文件。
 
 ## 文件说明
