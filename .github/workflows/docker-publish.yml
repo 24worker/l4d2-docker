@@ -7,8 +7,8 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
-    # runs-on: self-hosted
+    # runs-on: ubuntu-latest
+    runs-on: org-aliyun-sin
 
     steps:
       - name: Checkout repository
